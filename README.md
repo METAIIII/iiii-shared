@@ -2,6 +2,10 @@
 
 ---
 
+### Google
+
+`NEXT_PUBLIC_GA_MEASUREMENT_ID`
+
 ### Prismic
 
 `NEXT_PUBLIC_PRISMIC_REPO`
