@@ -1,24 +1,24 @@
-const currency = "aud";
+const currency = 'aud';
 
 export function formatAmountForDisplay(amount: number): string {
-  const numberFormat = new Intl.NumberFormat(["en-US"], {
-    style: "currency",
+  const numberFormat = new Intl.NumberFormat(['en-US'], {
+    style: 'currency',
     currency: currency,
-    currencyDisplay: "symbol",
+    currencyDisplay: 'symbol',
   });
   return numberFormat.format(amount / 100);
 }
 
 export function formatAmountForStripe(amount: number): number {
-  const numberFormat = new Intl.NumberFormat(["en-US"], {
-    style: "currency",
+  const numberFormat = new Intl.NumberFormat(['en-US'], {
+    style: 'currency',
     currency: currency,
-    currencyDisplay: "symbol",
+    currencyDisplay: 'symbol',
   });
   const parts = numberFormat.formatToParts(amount);
   let zeroDecimalCurrency = true;
   for (const part of parts) {
-    if (part.type === "decimal") {
+    if (part.type === 'decimal') {
       zeroDecimalCurrency = false;
     }
   }
